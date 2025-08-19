@@ -1,0 +1,77 @@
+<!doctype html>
+<rect x="180" y="140" width="160" height="110" rx="4" />
+<rect x="250" y="60" width="20" height="80" />
+<rect x="245" y="40" width="30" height="20" />
+<!-- Tre kronor förenklade -->
+<g transform="translate(260,32) scale(0.9)">
+<path d="M-18 10 l6-8 l6 8 l6-8 l6 8 v8 h-24z" />
+</g>
+</g>
+<!-- Kyrkspira -->
+<g fill="var(--ink)" opacity=".9">
+<rect x="850" y="150" width="24" height="70" />
+<polygon points="862,80 880,150 844,150" />
+</g>
+<!-- Segelbåt -->
+<g transform="translate(520,245)">
+<polygon points="0,0 80,-120 80,0" fill="var(--sail)" />
+<polygon points="10,0 10,-90 110,0" fill="var(--sail)" opacity=".85" />
+<rect x="-10" y="0" width="160" height="8" fill="var(--ink)" rx="4" />
+</g>
+</svg>
+<div class="title-wrap">
+<h1>Stockholm Quiz</h1>
+<p>Testa dina kunskaper – enkelt, snyggt och funktionellt.</p>
+</div>
+</header>
+
+
+<main class="container" id="app" role="main">
+<section class="card" aria-live="polite">
+<div class="progress-wrap" aria-hidden="false">
+<div class="progress" id="progress" aria-label="Framsteg" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+</div>
+
+
+<div id="intro" class="intro">
+<h2>Välkommen!</h2>
+<p>Du får en fråga i taget. Välj ett svar och gå vidare. I slutet får du din poäng och lite kul fakta.</p>
+<button id="startBtn" class="btn primary">Starta quiz</button>
+</div>
+
+
+<div id="quiz" class="quiz hidden" aria-labelledby="qHeader">
+<h2 id="qHeader" class="sr-only">Fråga</h2>
+<div id="questionText" class="question"></div>
+<form id="options" class="options" role="radiogroup" aria-label="Svarsalternativ"></form>
+<div class="actions">
+<button class="btn" id="prevBtn" aria-label="Föregående fråga">Tillbaka</button>
+<button class="btn primary" id="nextBtn" aria-label="Nästa fråga">Nästa</button>
+</div>
+</div>
+
+
+<div id="result" class="result hidden">
+<h2>Resultat</h2>
+<p id="scoreText" class="score"></p>
+<details class="facts">
+<summary>Visa fakta per fråga</summary>
+<ol id="factList"></ol>
+</details>
+<div class="actions">
+<button class="btn" id="restartBtn">Kör igen</button>
+<button class="btn ghost" id="shareBtn" aria-label="Dela resultat">Dela</button>
+</div>
+</div>
+</section>
+</main>
+
+
+<footer class="footer">
+<p>Byggt med kärlek till Stockholm. © <span id="year"></span></p>
+</footer>
+
+
+<script src="app.js" defer></script>
+</body>
+</html>
